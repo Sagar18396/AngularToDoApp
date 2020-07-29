@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-   addition:any = []
+  addition:any = []
 
   constructor() { }
 
@@ -22,7 +22,6 @@ export class TodoComponent implements OnInit {
 
 
   delete(i:any){
-    console.log(i)
     const index: number = this.addition.indexOf(i);
     this.addition.splice(index, 1);
   }

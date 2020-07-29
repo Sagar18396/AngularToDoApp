@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { TodoComponent } from './todo/todo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 
+import { TaskService } from './task.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
