@@ -20,9 +20,6 @@ export class TodoComponent implements OnInit {
     this.addition.push(c)
   }
 
-  edit(i:any){
-    console.log(i)
-  }
 
   delete(i:any){
     console.log(i)
