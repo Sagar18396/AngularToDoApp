@@ -1,7 +1,7 @@
 <div class="container">
     <label for="AddTask">Task</label>
-    <input type="text" class="form-control" value={{t}} #task><br>
+    <input type="text" class="form-control" value={{data.task}} #task><br>
     <label for="AddDate">Date</label><br>
-    <input type="date" value={{d}} #dueDate> 
+    <input type="date" value={{data.dueDate}} #dueDate> 
     <button type="button" class="btn btn-light"  (click)="deleteTask(i)">Delete</button><br><br>
 </div>

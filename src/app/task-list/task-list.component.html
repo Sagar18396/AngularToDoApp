@@ -3,7 +3,7 @@
     <input type="text" class="form-control" placeholder="Enter task.." #task><br>
     <label for="AddDate">Date</label><br>
     <input type="date" #dueDate> 
-    <button type="button" class="btn btn-light"  (click)="addTask(task, dueDate)">Add</button><br><br>
+    <button type="button" class="btn btn-light"  (click)="addTask(newId, task, dueDate)">Add</button><br><br>
 
 
     <table class="table">
@@ -23,7 +23,7 @@
                 <td>
                 {{ i.dueDate }}
                 </td>
-                <td><button type="button" class="btn btn-light" (click)="taskDetails(i.id, i.task, i.dueDate)">Edit</button></td>
+                <td><button type="button" class="btn btn-light" (click)="taskDetails(i)">Edit</button></td>
             
             </tr>
         </tbody>

@@ -6,28 +6,18 @@ import { Todo } from './todo';
 })
 export class TaskService {
 
-  public newId: number;
+  // public newId: number;
 
-  constructor() { 
-    let tasks = this.getTasks();
-
-    if (tasks.length == 0){
-      this.newId = 1;
-    }
-    else{
-      let lastId = tasks[tasks.length - 1].id;
-      this.newId = lastId + 1;
-    }
+  constructor() {
   }
 
-  public addTask(task: string, due: Date): void{
-    let newTask = new Todo(this.newId, task, due);
+  public addTask(id:number, task: string, due: Date): void{
+    let newTask = new Todo(id, task, due);
     // console.log(this.newId, task, due);
     let tasks = this.getTasks();
     tasks.push(newTask);
 
     this.setLocalStorageTasks(tasks);
-    this.newId++;
   }
 
   public getTasks(): Todo[]{
